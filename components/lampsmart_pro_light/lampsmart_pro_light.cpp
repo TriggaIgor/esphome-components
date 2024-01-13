@@ -156,7 +156,7 @@ void LampSmartProLight::send_packet(uint16_t cmd, uint8_t cold, uint8_t warm) {
   uint16_t seed = (uint16_t) rand();
 
   adv_data_t packet = {{
-      .prefix = {0x02, 0x01, 0x02, 0x1B, 0x16, 0xF0, 0x08, 0x10, 0x80, 0x00},
+      .prefix = {0x02, 0x01, 0x01, 0x1B, 0x03, 0x71, 0x0F, 0x55, 0xAA, 0x98},
       .packet_number = ++(this->tx_count_),
       .type = 0x100,
       .identifier = light_state_ ? light_state_->get_object_id_hash() : 0xcafebabe,
