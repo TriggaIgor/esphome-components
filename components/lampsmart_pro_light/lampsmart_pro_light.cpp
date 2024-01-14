@@ -169,7 +169,7 @@ void LampSmartProLight::send_packet(uint16_t cmd, uint8_t cold, uint8_t warm) {
       ._26 = 0,
       .rand = seed,
   }};
-  ESP_LOGD(TAG, "LampSmartPacket %d", packet.raw);
+  ESP_LOGD(TAG, "LampSmartPacket %x", packet.raw);
   ble_whiten(&packet.raw[9], 0x12, (uint8_t) seed, 0);
   packet.crc16 = v2_crc16_ccitt(&packet.raw[7], 0x16, ~seed);
   
