@@ -32,8 +32,8 @@ typedef union {
 } adv_data_t;
 
 static esp_ble_adv_params_t ADVERTISING_PARAMS = {
-  .adv_int_min = 0x20,
-  .adv_int_max = 0x20,
+  .adv_int_min = 0x0020,
+  .adv_int_max = 0x0020,
   .adv_type = ADV_TYPE_NONCONN_IND,
   .own_addr_type = BLE_ADDR_TYPE_PUBLIC,
   .peer_addr =
